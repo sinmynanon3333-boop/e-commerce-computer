@@ -1,0 +1,419 @@
+:root {
+  --bg: #0a0e12;
+  --panel: #10161c;
+  --panel-2: #0d1318;
+  --border: #1c252e;
+  --muted: #7a8794;
+  --text: #e6edf3;
+  --cyan: #22d3ee;
+}
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  overflow-x: hidden;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Inter", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+.mono {
+  font-family: "JetBrains Mono", monospace;
+}
+.display {
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+/* NAV */
+.nav-top {
+  border-bottom: 1px solid var(--line);
+  background: rgba(10, 14, 18, 0.85);
+  backdrop-filter: blur(8px);
+}
+.nav-top .brand {
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  font-size: 1.25rem;
+}
+.nav-top a.nav-link {
+  color: var(--muted);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 0.5rem 0.9rem;
+}
+.nav-top a.nav-link:hover {
+  color: var(--cyan);
+}
+.icon-btn {
+  color: var(--text);
+  background: transparent;
+  border: 0;
+  padding: 0.4rem 0.6rem;
+  position: relative;
+}
+.icon-btn:hover {
+  color: var(--cyan);
+}
+.cart-badge {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  background: var(--cyan);
+  color: #06121a;
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 1px 5px;
+  border-radius: 8px;
+  font-family: "JetBrains Mono", monospace;
+}
+
+/* HEADER */
+.page-title {
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 700;
+  font-size: 3.25rem;
+  letter-spacing: 0.04em;
+  line-height: 1;
+}
+.meta-line {
+  color: var(--muted);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+/* CART CARD */
+.cart-card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 1.25rem;
+}
+.thumb {
+  width: 100%;
+  aspect-ratio: 1/1;
+  background: #0a1218;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  object-fit: cover;
+  display: block;
+}
+.item-title {
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 700;
+  font-size: 1.4rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin: 0;
+}
+.sn {
+  color: var(--muted);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-top: 0.25rem;
+}
+.tag {
+  display: inline-block;
+  padding: 0.25rem 0.6rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--panel-2);
+  color: var(--muted);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  margin-right: 0.4rem;
+}
+.price-lg {
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 700;
+  font-size: 1.75rem;
+  letter-spacing: 0.02em;
+}
+
+.qty {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: var(--panel-2);
+  overflow: hidden;
+}
+.qty button {
+  background: transparent;
+  border: 0;
+  color: var(--text);
+  width: 34px;
+  height: 34px;
+  line-height: 1;
+  font-size: 1.1rem;
+}
+.qty button:hover {
+  color: var(--cyan);
+}
+.qty .val {
+  min-width: 42px;
+  text-align: center;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.85rem;
+  border-left: 1px solid var(--line);
+  border-right: 1px solid var(--line);
+  height: 34px;
+  line-height: 34px;
+}
+
+.remove-btn {
+  background: transparent;
+  border: 0;
+  color: var(--muted);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+.remove-btn:hover {
+  color: #ff6b6b;
+}
+
+/* SUMMARY */
+.summary {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 1.5rem;
+}
+.summary h3 {
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  margin: 0 0 1.25rem;
+}
+.sum-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.55rem 0;
+  color: var(--muted);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.sum-row .val {
+  color: var(--text);
+}
+.sum-row .free {
+  color: var(--cyan);
+}
+.divider {
+  height: 1px;
+  background: var(--line);
+  margin: 0.75rem 0 1rem;
+}
+.total-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-top: 0.25rem;
+}
+.total-row .lbl {
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 700;
+  font-size: 1.3rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.total-row .amt {
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 700;
+  font-size: 1.9rem;
+  color: var(--cyan);
+}
+
+.btn-cyan {
+  background: var(--cyan);
+  border: 1px solid var(--cyan);
+  color: #06121a;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 0.85rem 1rem;
+  border-radius: 4px;
+  width: 100%;
+}
+.btn-cyan:hover {
+  background: var(--cyan-2);
+  border-color: var(--cyan-2);
+  color: var(--cyan);
+}
+.btn-ghost {
+  background: transparent;
+  border: 1px solid var(--cyan);
+  color: var(--cyan);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 0.85rem 1rem;
+  border-radius: 4px;
+  width: 100%;
+}
+.btn-ghost:hover {
+  background: rgba(34, 211, 238, 0.08);
+  color: var(--cyan);
+}
+
+.trust {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  color: var(--muted);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.74rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-top: 0.65rem;
+}
+.trust i {
+  color: var(--cyan);
+}
+
+.promo {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 1.25rem;
+  margin-top: 1.25rem;
+}
+.promo .lbl {
+  color: var(--muted);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.74rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin-bottom: 0.6rem;
+}
+.promo-row {
+  display: flex;
+  gap: 0;
+}
+.promo input {
+  flex: 1;
+  background: var(--panel-2);
+  border: 1px solid var(--line);
+  color: var(--text);
+  padding: 0.7rem 0.85rem;
+  border-radius: 4px 0 0 4px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.8rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  outline: none;
+}
+.promo input::placeholder {
+  color: #4a5764;
+}
+.promo input:focus {
+  border-color: var(--cyan);
+}
+.promo button {
+  background: #1a2630;
+  border: 1px solid var(--line);
+  border-left: 0;
+  color: var(--text);
+  padding: 0.7rem 1.1rem;
+  border-radius: 0 4px 4px 0;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+.promo button:hover {
+  background: #22313e;
+}
+
+/* FOOTER */
+footer {
+  border-top: 1px solid var(--line);
+  margin-top: 4rem;
+  padding: 2.25rem 0;
+  text-align: center;
+}
+footer .brand-f {
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  font-size: 1.2rem;
+}
+footer a {
+  color: var(--muted);
+  text-decoration: none;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin: 0 1rem;
+}
+footer a:hover {
+  color: var(--cyan);
+}
+footer .copy {
+  color: #4a5764;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .page-title {
+    font-size: 2.25rem;
+  }
+}
+.nav-top {
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+}
+.nav-top a {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+.nav-top a:hover {
+  color: var(--cyan);
+}
+.brand {
+  font-weight: 700;
+  font-size: 1.15rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.cart-wrap {
+  position: relative;
+}
+.cart-count {
+  position: absolute;
+  top: -6px;
+  right: -10px;
+  background: var(--cyan);
+  color: #001014;
+  font-size: 0.65rem;
+  font-weight: 700;
+  border-radius: 999px;
+  padding: 0 5px;
+}

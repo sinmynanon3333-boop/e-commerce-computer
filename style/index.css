@@ -1,0 +1,493 @@
+:root {
+  --bg: #0a0e12;
+  --panel: #10161c;
+  --panel-2: #0d1318;
+  --border: #1c252e;
+  --muted: #7a8794;
+  --text: #e6edf3;
+  --cyan: #22d3ee;
+  --cyan-2: #06b6d4;
+}
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Inter", sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+.display,
+.brand {
+  font-family: "Rajdhani", sans-serif;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.text-cyan {
+  color: var(--cyan) !important;
+}
+.text-muted2 {
+  color: var(--muted) !important;
+}
+.border-dark2 {
+  border-color: var(--border) !important;
+}
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--border);
+}
+.panel-2 {
+  background: var(--panel-2);
+  border: 1px solid var(--border);
+}
+
+/* NAV */
+.nav-top {
+  background: var(--bg);
+
+  border-bottom: 1px solid var(--border);
+}
+.nav-top a {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+.nav-top a:hover {
+  color: var(--cyan);
+}
+.brand {
+  font-weight: 700;
+  font-size: 1.15rem;
+  letter-spacing: 0.12em;
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  min-height: 520px;
+  border-bottom: 1px solid var(--border);
+  overflow: hidden;
+}
+.slider-track {
+  position: absolute;
+  display: flex; /* lines slides up side by side */
+  width: 300%; /* 3 slides × 100% */
+  height: 100%;
+  transition: transform 0.8s ease-in-out;
+}
+
+.slide {
+  min-height: 520px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+.slide:nth-child(1) {
+  background-image: url("https://images.acer.com/is/image/acer/Predator_Chart_Page_Hero_1-1:Secondary-Hero-XL");
+}
+.slide:nth-child(2) {
+  background-image: url("https://p3-ofp.static.pub/ShareResource/na/dlp/heros/big/lenovo-deals-gaming-laptops-still-life.jpg");
+}
+.slide:nth-child(3) {
+  background-image: url("https://dlcdnwebimgs.asus.com/gain/C48DD51E-1BF7-4795-809E-0E257351138B/fwebp/fwebp");
+}
+.top {
+  position: relative;
+  min-height: 520px;
+  background:
+    linear-gradient(
+      120deg,
+      rgba(10, 14, 18, 0.95) 0%,
+      rgba(10, 14, 18, 0.55) 55%,
+      rgba(10, 14, 18, 0.2) 100%
+    ),
+    radial-gradient(
+      circle at 75% 40%,
+      rgba(34, 211, 238, 0.15),
+      transparent 55%
+    ),
+    center;
+}
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  border: 1px solid var(--cyan);
+  color: var(--cyan);
+  padding: 0.25rem 0.6rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+.chip .dot {
+  width: 6px;
+  height: 6px;
+  background: var(--cyan);
+  border-radius: 50%;
+}
+.hero h1 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: 1;
+  margin: 0;
+}
+.hero h1 .ghost {
+  color: transparent;
+  -webkit-text-stroke: 1px var(--cyan);
+}
+.btn-cyan {
+  background: var(--cyan);
+  color: #001014;
+  border: none;
+  border-radius: 0;
+  padding: 0.7rem 1.4rem;
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-size: 0.82rem;
+}
+.btn-cyan:hover {
+  color: #67e8f9;
+  background: transparent;
+}
+.btn-ghost {
+  background: transparent;
+  color: var(--cyan);
+  border: 1px solid var(--cyan);
+  border-radius: 0;
+  padding: 0.7rem 1.4rem;
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-size: 0.82rem;
+}
+.btn-ghost:hover {
+  background: rgba(34, 211, 238, 0.08);
+  color: var(--cyan);
+}
+.spec-card {
+  background: rgba(10, 14, 18, 0.85);
+  border: 1px solid var(--border);
+}
+.spec-card .row > div {
+  padding: 0.55rem 0.9rem;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.spec-card .row > div:last-child {
+  border-bottom: none;
+}
+.spec-card .lbl {
+  color: var(--muted);
+}
+
+/* SECTION HEADERS */
+.section-title {
+  color: var(--cyan);
+  font-size: 1.1rem;
+  letter-spacing: 0.22em;
+}
+.section-sub {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+.rule {
+  height: 1px;
+  background: var(--border);
+  flex: 1;
+}
+.link-arrow {
+  color: var(--text);
+  text-decoration: none;
+  font-family: "Rajdhani", sans-serif;
+  letter-spacing: 0.22em;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+}
+.link-arrow:hover {
+  color: var(--cyan);
+}
+
+/* CATEGORY TILES */
+.tile {
+  position: relative;
+  min-height: 200px;
+  border: 1px solid var(--border);
+  background: var(--panel) center/cover no-repeat;
+  overflow: hidden;
+  transition: 0.3s ease-in-out;
+}
+.tile:hover {
+  transform: scale(1.03);
+}
+.tile.lg {
+  min-height: 200px;
+}
+.tile .overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(10, 14, 18, 0.92) 0%,
+    rgba(10, 14, 18, 0.55) 60%,
+    rgba(10, 14, 18, 0.15) 100%
+  );
+}
+.tile .inner {
+  position: relative;
+  padding: 1.5rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 0.4rem;
+}
+.tile h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: 0.06em;
+  text-transform: none;
+  font-family: "Rajdhani", sans-serif;
+}
+.tile p {
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin: 0;
+}
+.tile .tag {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: var(--cyan);
+  color: #001014;
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  font-size: 0.7rem;
+  padding: 0.2rem 0.55rem;
+  text-transform: uppercase;
+}
+
+.tile-ws {
+  background-image:
+    linear-gradient(120deg, rgba(10, 14, 18, 0.4), rgba(10, 14, 18, 0.2)),
+    url("https://images.unsplash.com/photo-1587202372634-32705e3bf49c?auto=format&fit=crop&w=1200&q=80");
+}
+.tile-lp {
+  background-image:
+    linear-gradient(120deg, rgba(10, 14, 18, 0.4), rgba(10, 14, 18, 0.2)),
+    url("https://i.pinimg.com/1200x/b0/c0/b8/b0c0b829bd054942ca7bda5aed8182f6.jpg");
+}
+.tile-cp {
+  background-image:
+    linear-gradient(120deg, rgba(10, 14, 18, 0.85), rgba(10, 14, 18, 0.4)),
+    url("https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?auto=format&fit=crop&w=1600&q=80");
+  min-height: 180px;
+}
+
+/* PERFORMANCE METRICS */
+.metric {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  padding: 1.4rem;
+}
+.metric .icon {
+  color: var(--cyan);
+  font-size: 1.4rem;
+}
+.metric .val {
+  color: var(--muted);
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+.metric h4 {
+  font-size: 1.4rem;
+  margin: 0.6rem 0 0.8rem;
+  font-family: "Rajdhani", sans-serif;
+  text-transform: none;
+  letter-spacing: 0.02em;
+}
+.bar {
+  height: 3px;
+  background: var(--border);
+  position: relative;
+  margin-bottom: 0.9rem;
+}
+.bar::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: var(--w, 60%);
+  background: var(--cyan);
+}
+.metric p {
+  color: var(--muted);
+  font-size: 0.82rem;
+  margin: 0;
+}
+.metric {
+  transition: 0.3s ease-in-out;
+}
+.metric:hover {
+  transform: scale(1.04);
+}
+
+/* PRODUCTS */
+.product {
+  background: transparent;
+  border: 2px transparent solid;
+  padding-left: 5px;
+  padding-right: 5px;
+  transition: all 0.3s ease-in-out;
+}
+.product:hover {
+  border: 2px var(--cyan) solid;
+}
+.product .img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s;
+}
+.product:hover .img-wrap img {
+  transform: scale(1.05);
+}
+.product .img-wrap {
+  position: relative;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  aspect-ratio: 1/1;
+  overflow: hidden;
+}
+.product .img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.product .badge-tag {
+  position: absolute;
+  top: 0.7rem;
+  left: 0.7rem;
+  background: var(--cyan);
+  color: #001014;
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 700;
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  padding: 0.2rem 0.55rem;
+  text-transform: uppercase;
+}
+.product .badge-tag.dark {
+  background: #0a0e12;
+  color: #fff;
+  border: 1px solid var(--border);
+}
+.product .cat {
+  color: var(--muted);
+  font-size: 0.7rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  margin-top: 0.8rem;
+}
+.product .name {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin: 0.15rem 0;
+  text-transform: none;
+  letter-spacing: 0.02em;
+}
+.product .price {
+  color: var(--text);
+  font-size: 0.9rem;
+}
+
+/* FOOTER */
+footer {
+  border-top: 1px solid var(--border);
+  padding: 3rem 0 2rem;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+footer .brand {
+  color: var(--text);
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+footer a {
+  color: var(--muted);
+  text-decoration: none;
+  margin: 0 0.9rem;
+  letter-spacing: 0.16em;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+}
+footer a:hover {
+  color: var(--cyan-2);
+}
+.socials a {
+  font-size: 1rem;
+  margin: 0 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+}
+.text-gradient {
+  --_space: ;
+
+  background-image: linear-gradient(
+    45deg var(--_space),
+    #0008f0 7%,
+    #7d658f 11%,
+    #1a12b3 31%,
+    #1b18cc 33%,
+    #269dff 44%,
+    #db8c7f 56%,
+    #120fbf 67%,
+    #0516fc 100%,
+    #624d94 89%,
+    #bb393e 100%
+  );
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@supports (background-image: linear-gradient(in oklch, #000, #fff)) {
+  .text-gradient {
+    --_space: in oklch;
+  }
+}
+body {
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
