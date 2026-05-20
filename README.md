@@ -16,15 +16,6 @@
 - **Laptops** — Desktop-class power in a portable form factor
 - **Individual Components** — GPUs, CPUs, NVMe Storage, and High-Bandwidth RAM
 
-### Performance Highlights
-
-| Benchmark | Result |
-|-----------|--------|
-| 3D Rendering (Blender / V-Ray) | +24% vs Gen 12 |
-| AI Inference (Local LLM) | 6.4 GT/s with DDR5 |
-| High-Refresh 4K Gaming | 240 FPS Average |
-
----
 
 ## 🚀 Getting Started (Local Development)
 
