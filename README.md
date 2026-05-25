@@ -8,13 +8,13 @@
 
 ## 🖥️ About
 
-**How2berich** is an e-commerce store specializing in enterprise-grade and high-performance computer hardware. Whether you're a 3D artist, AI researcher, or competitive gamer, the store offers curated hardware validated for real-world performance.
+**How2berich** is an simple e-commerce store 
 
 ### Product Categories
 
-- **Workstations** — Maximum throughput for rendering, simulation, and computation
-- **Laptops** — Desktop-class power in a portable form factor
-- **Individual Components** — GPUs, CPUs, NVMe Storage, and High-Bandwidth RAM
+- **Workstations** 
+- **Laptops** 
+- **Individual Components** 
 
 
 ## 🚀 Getting Started (Local Development)
